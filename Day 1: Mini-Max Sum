@@ -1,0 +1,8 @@
+void miniMaxSum(vector<int> arr) {
+ sort(arr.begin(),arr.end());
+ long long sum=0;
+ for(auto val: arr){
+     sum+=val;
+ }
+ cout<<sum-arr[arr.size()-1]<<" "<<sum-arr[0];
+}
