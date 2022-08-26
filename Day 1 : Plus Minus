@@ -1,0 +1,17 @@
+void plusMinus(vector<int> arr) {
+    float pos=0,neg=0,zer=0;
+    float sz=arr.size();
+    for(auto val:arr){
+        if(val>0)
+         pos++;
+        else if(val<0)
+         neg++;
+         else {
+           zer++;
+         }
+        
+    }
+    cout<<setprecision(6)<<pos/sz<<endl;
+    cout<<setprecision(6)<<neg/sz<<endl;
+    cout<<setprecision(6)<<zer/sz<<endl;
+}
