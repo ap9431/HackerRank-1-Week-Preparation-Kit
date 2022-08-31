@@ -1,0 +1,33 @@
+bool check(string &s){int i=0;int j=s.length()-1;int count=0;
+     while ((i<j)&&(s[i]==s[j])){
+         i++;
+         j--;
+         
+     }
+     if(i==s.length()/2){
+         return true;
+     }
+      return false;}
+
+int palindromeIndex(string s){int x=0;
+    if(check(s)==true){
+    x=-1;
+}
+else{int i=0;int j=s.length()-1;
+while(i<j){
+    if(s[i]!=s[j]){
+        
+        s.erase(j, 1);
+        if(check(s)==true){
+            x=j;
+        }else{
+            x=i;
+        }
+        break;
+    }i++;j--;
+}
+        
+}
+
+return x;
+}
