@@ -1,0 +1,38 @@
+
+string caesarCipher(string s, int k) {
+    int i,c=0,t=0;
+    char f;
+    for(int i=0;i<s.size();i++){
+        if(s[i]>64 && s[i]<91){
+            k=k%26;
+            s[i]+=k;
+             if(s[i]>90){
+                 c=s[i]-90;
+                 c--;
+                 s[i]='A'+c;
+             }
+        }
+        if((s[i]>96 && s[i]<123)  ){
+            k=k%26;
+            f=s[i];
+             t=f+k;
+             f+=k;
+           
+           // cout<<s[i]<<"hjjjjjjjjjjjhk"<<endl;
+             if(t>122)
+             {
+                //cout<<i<<"  jhhjhjkk  "<<s[i]+k<<endl;
+                 c=t-122;
+                 --c;
+                 //cout<<c<<"hjjjjjjjjjjjhk"<<endl;
+                 s[i]='a'+c;
+                // cout<<s[i];
+             }else{
+                 s[i]=f;
+             }
+            
+             
+        }
+    }
+    return s;
+}
