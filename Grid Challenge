@@ -1,0 +1,14 @@
+string gridChallenge(vector<string> g) {
+    
+    for(int i=0;i<g.size();i++){
+        sort(g[i].begin(),g[i].end());
+    }
+    for(int i=0;i<g[0].size();i++){
+        for(int j=0;j<g.size()-1;j++){
+            if(g[j][i]>g[j+1][i]){
+                return "NO";
+            }
+        }
+    }
+    return "YES";
+}
