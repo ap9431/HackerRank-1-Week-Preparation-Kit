@@ -1,0 +1,20 @@
+int superDigit(string n, int k) {
+    long long int val=0,m=0,u=0;
+    long long int sum=0;
+    for(int i=0;i<n.size();i++){
+        val+=n[i]-'0';
+    }
+    val*=k;
+    while(val>9){
+        while(val>0){
+            m=val%10;
+            sum+=m;
+            val/=10;
+        }
+        val=sum;
+        
+        sum=0;
+    }
+    int p=val;
+    return p;
+}
